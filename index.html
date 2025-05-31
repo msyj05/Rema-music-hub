@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rema Music Hub - Home</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/9f2fe5c7c9.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    /* Hero Section Styles */
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/Gallery/Rema_landscape.webp') no-repeat center center/cover;
+        color: white;
+    }
+
+    .hero h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero .btn {
+        padding: 15px 30px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        transition: background-color 0.3s;
+    }
+
+    .hero .btn:hover {
+        background-color: #45a049;
+    }
+
+    /* Top Tracks Section Styles */
+    .top-tracks {
+        padding: 50px 20px;
+        text-align: center;
+        background-color: #f9f9f9;
+    }
+
+    .top-tracks h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .tracks-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .track {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 700px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .track img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        margin-right: 15px;
+    }
+
+    .track-details {
+        text-align: left;
+    }
+
+    .track-details h3 {
+        margin: 0;
+        font-size: 1.5em;
+    }
+
+    .track-details p {
+        margin: 5px 0 0;
+        font-size: 1em;
+        color: #555;
+    }
+
+    .view-all {
+        margin-top: 30px;
+        font-size: 1.2em;
+    }
+
+    .view-all a {
+        color: #4CAF50;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .view-all a:hover {
+        color: #45a049;
+    }
+
+    .top-albums {
+        padding: 50px 20px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .top-albums h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #333;
+    }
+
+    .albums-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .album-item {
+        flex-shrink: 0;
+        width: 200px;
+        height: 270px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .album-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .album-item img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .album-item h3 {
+        margin: 0;
+        font-size: 1.2em;
+        color: #333;
+    }
+
+    .album-item p {
+        margin: 5px 0 0;
+        font-size: 0.9em;
+        color: #666;
+    }
+
+    .album-item a {
+        text-decoration: none;
+    }
+
+    .top-albums .view-all {
+        margin-top: 30px;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .top-albums .view-all a {
+        color: #4CAF50;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .top-albums .view-all a:hover {
+        color: #45a049;
+    }
+
+    /* Photos Section */
+.photos {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.photos h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.photos-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px;
+}
+
+.photo {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photos .view-all {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+    .hero {
+        padding: 20px 10px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Rema Music Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="music_all_albums.html">Music Library</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Rema's Music Hub</h1>
+            <p>Explore Rema's entire music journey with his albums, collaborations, and singles in one platform. Experience music like never before!</p>
+            <a href="music_all_albums.html" class="btn">Discover Music</a>
+        </section>
+
+        <section class="top-albums">
+            <h2>Top Albums</h2>
+            <div class="albums-container">
+                <div class="album-item">
+                    <a href="Rave & Roses Ultra.html">
+                        <img src="images/Music Library/Rave & Roses Ultra cover photo.jpg" alt="Rave & Roses Ultra cover photo">
+                        <h3>Rave & Roses Ultra</h3>
+                        <p>150K Listeners</p>
+                    </a>
+                </div>
+                <div class="album-item">
+                    <a href="Rave And Roses.html">
+                        <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                        <h3>Rave & Roses</h3>
+                        <p>130K Listeners</p>
+                    </a>
+                </div>
+                <div class="album-item">
+                    <a href="HEIS.html">
+                        <img src="images/Music Library/HEIS cover photo.jpg" alt="HEIS cover photo">
+                        <h3>HEIS</h3>
+                        <p>110K Listeners</p>
+                    </a>
+                </div>
+                <div class="album-item">
+                    <a href="Rema Compilation.html">
+                        <img src="images/Music Library/Rema Compilation cover photo.jpg" alt="Rema Compilation cover photo">
+                        <h3>Rema Compilation</h3>
+                        <p>95K Listeners</p>
+                    </a>
+                </div>
+                <div class="album-item">
+                    <a href="REMA - EP.html">
+                        <img src="images/Music Library/Rema - EP cover photo.jpg" alt="Rema - EP cover photo">
+                        <h3>REMA - EP</h3>
+                        <p>80K Listeners</p>
+                    </a>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="music_all_albums.html">View all albums</a>
+            </div>
+        </section>
+
+        <section class="top-tracks">
+            <h2>Top Tracks</h2>
+            <div class="tracks-container">
+                <div class="track">
+                    <img src="images/Music Library/Calm Down Remix cover photo.jpg" alt="Rave & Roses Ultra cover photo">
+                    <div class="track-details">
+                        <h3>Calm Down (Remix) ft Selena Gomez</h3>
+                        <p>1,234,567 listeners</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="images/Music Library/Calm Down cover photo.jpg" alt="Rave & Roses Ultra cover photo">
+                    <div class="track-details">
+                        <h3>Calm Down</h3>
+                        <p>987,654 listeners</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="images/Music Library/Rave & Roses Ultra cover photo.jpg" alt="Rave & Roses Ultra cover photo">
+                    <div class="track-details">
+                        <h3>Charm</h3>
+                        <p>876,543 listeners</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="images/Music Library/Soundgasm cover photo.jpg" alt="Rave & Roses cover photo">
+                    <div class="track-details">
+                        <h3>Soundgasm</h3>
+                        <p>765,432 listeners</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="images/Music Library/Rema - EP cover photo.jpg" alt="Dumebi (The Remixes) cover photo">
+                    <div class="track-details">
+                        <h3>Dumebi</h3>
+                        <p>654,321 listeners</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="music_all_albums.html">View all tracks</a>
+            </div>
+        </section>
+
+        <section class="photos">
+            <h2>Photos</h2>
+            <div class="photos-container">
+                <div class="photo">
+                    <img src="images/Gallery/Rema (10).jpeg" alt="photo of Rema">
+                </div>
+                <div class="photo">
+                    <img src="images/Gallery/Rema (2).jpeg" alt="photo of Rema">
+                </div>
+                <div class="photo">
+                    <img src="images/Gallery/Rema (4).jpeg" alt="photo of Rema">
+                </div>
+                <div class="photo">
+                    <img src="images/Gallery/Rema (3).jpeg" alt="photo of Rema">
+                </div>
+                <div class="photo">
+                    <img src="images/Gallery/Rema (5).jpeg" alt="photo of Rema">
+                </div>
+                <div class="photo">
+                    <img src="images/Gallery/Rema (7).jpeg" alt="photo of Rema">
+                </div>
+                <div class="photo">
+                    <img src="images/Gallery/Rema (13).jpeg" alt="photo of Rema">
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="gallery.html">View all photos</a>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/heisrema" target="_blank" class="icon facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/heisrema" target="_blank" class="icon twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/heisrema" target="_blank" class="icon instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/heisrema" target="_blank" class="icon youtube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <p>&copy; 2024 Rema Music Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

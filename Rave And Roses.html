@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rave & Roses</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/9f2fe5c7c9.js" crossorigin="anonymous"></script>
+    <style>
+        /* Album Details Page */
+        .album-details {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: #f4f0a3; /* Light color close to album cover's vibe */
+            gap: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .album-cover {
+            flex-shrink: 0;
+            width: 250px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .album-cover img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .album-info {
+            flex-grow: 1;
+            color: #222;
+        }
+
+        .album-info h2 {
+            font-size: 2.5em;
+            margin: 0 0 10px;
+        }
+
+        .album-info p {
+            margin: 0;
+        }
+
+        .album-tracks {
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .album-tracks h3 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        .audiolist {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .audiolist li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;          
+        }
+
+        .audiolist li:hover{
+            transform: scale(1.05);   
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .audiolist li img {
+            max-width: 100px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .audiolist li audio {
+            width: 100%;
+        }
+
+        .audiolist span {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 10px 0;
+    }
+    .album-info h2 {
+        font-size: 1.5em; /* Even smaller for very small screens */
+    }
+    .audiolist {
+        grid-template-columns: 1fr; /* One column for very small screens */
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Rema Music Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="music_all_albums.html">Music Library</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="album-details">
+            <div class="album-cover">
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+            </div>
+            <div class="album-info">
+                <h2>Rave & Roses</h2>
+                <p>16 songs</p>
+                <p>Release Date: March 25, 2022</p>
+            </div>
+        </section>
+
+        <section class="album-tracks">
+            <h3>Tracklist</h3>
+            <ul class="audiolist">
+                <li>
+                    <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Divine</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Divine.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                    <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Hold Me ft 6LACK</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Hold Me.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Dirty</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Dirty.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Calm Down cover photo.jpg" alt="Calm Down cover photo">
+                    <span>Calm Down</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Calm Down.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Soundgasm</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Soundgasm.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Time N Affection ft Chris Brown</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Time N Affection.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Jo</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Jo.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Mara</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Mara.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Love</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Love.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Addicted</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Addicted.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Are You There?</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Are You There.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>FYN ft AJ Tracey</span>
+                    <audio controls>
+                        <source src="tracks/Rema - FYN.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Oroma Baby</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Oroma Baby.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Carry</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Carry.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Wine ft Yseult</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Wine.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                    <span>Runaway</span>
+                    <audio controls>
+                        <source src="tracks/Rema - Runaway.mp3" type="audio/mpeg">
+                    </audio>
+                </li>                   
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/heisrema" target="_blank" class="icon facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/heisrema" target="_blank" class="icon twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/heisrema" target="_blank" class="icon instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/heisrema" target="_blank" class="icon youtube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2024 Rema Music Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

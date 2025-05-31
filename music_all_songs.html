@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rema Music Hub - Songs</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/9f2fe5c7c9.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    .music-section {
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+    }
+    
+    .toggle-buttons {
+            margin: 20px 0;
+    }
+
+    .toggle-buttons a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px;
+            display: inline-block;
+    }
+
+    .toggle-buttons a:hover {
+            background-color: #45a049;
+    }
+
+    .toggle-buttons a.active {
+            background-color: #2e7d32;
+    }
+
+    .content {
+        text-align: center;
+    }
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Rema Music Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="#">Music Library</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="music-library" class="music-section">
+            <h2>Rema Songs</h2>
+            <div class="toggle-buttons">
+                <a id="all-albums" href="music_all_albums.html" onclick="setActiveLink('all-albums');" >All Albums</a>
+                <a id="all-songs" href="#" onclick="setActiveLink('all-songs');" class="active">All Songs</a>
+            </div>
+        </section>
+
+        <section class="content">
+            <p>Coming soon...</p>
+        </section>
+        <hr>
+
+ <footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/heisrema" target="_blank" class="icon facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://twitter.com/heisrema" target="_blank" class="icon twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com/heisrema" target="_blank" class="icon instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/heisrema" target="_blank" class="icon youtube"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    
+    <p>&copy; 2024 Rema Music Hub. All rights reserved.</p>
+ </footer>
+</body>
+</html>

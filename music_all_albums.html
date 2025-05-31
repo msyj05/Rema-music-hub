@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rema Music Hub - Albums</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/9f2fe5c7c9.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    .music-section {
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .album-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .album {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .album:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);;
+        }
+
+        .album img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .album h4 {
+            margin-top: 10px;
+            font-size: 1em;
+            color: black;
+        }
+
+        .album a {
+            text-decoration: none;
+        }
+
+        .toggle-buttons {
+            margin: 20px 0;
+        }
+
+        .toggle-buttons a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .toggle-buttons a:hover {
+            background-color: #45a049;
+        }
+
+        .toggle-buttons a.active {
+            background-color: #2e7d32;
+        }
+
+        @media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 10px 0;
+    }
+    .music-section h2 {
+        font-size: 1.5em;
+    }
+    .album-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));  /* Adjust grid for smaller screens */
+    }
+    .album {
+        max-width: 120px;  /* Smaller max-width for mobile */
+    }
+}
+
+/* Image handling for all screens */
+img {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Rema Music Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="#">Music Library</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="music-library" class="music-section">
+            <h2>Rema Albums</h2>
+            <div class="toggle-buttons">
+                <a id="all-albums" href="#albums" onclick="setActiveLink('all-albums');" class="active">All Albums</a>
+                <a id="all-songs" href="music_all_songs.html" onclick="setActiveLink('all-songs');">All Songs</a>
+            </div>
+        </section>
+        <hr>
+        <section id="albums" class="music-section">
+            <div class="album-container">
+                <div class="album">
+                    <a href="HEIS.html">
+                        <img src="images/Music Library/HEIS cover photo.jpg" alt="HEIS cover photo">
+                        <h4>HEIS Album</h4>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="Ravage - EP.html">
+                        <img src="images/Music Library/Ravage - EP cover photo.jpg" alt="Ravage - EP cover photo">
+                        <h4>Ravage - EP</h4>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="Rave & Roses Ultra.html">
+                        <img src="images/Music Library/Rave & Roses Ultra cover photo.jpg" alt="Rave & Roses Ultra cover photo">
+                        <h4>Rave & Roses Ultra</h4>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="Rave And Roses.html">
+                        <img src="images/Music Library/Rave & Roses cover photo.jpg" alt="Rave & Roses cover photo">
+                        <h4>Rave And Roses</h4>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="Rema Compilation.html">
+                        <img src="images/Music Library/Rema Compilation cover photo.jpg" alt="Rema Compilation cover photo">
+                        <h4>Rema Compilation</h4>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="Dumebi (The Remixes) EP.html">
+                        <img src="images/Music Library/Dumebi (The Remixes) cover photo.jpg" alt="Dumebi (The Remixes) cover photo">
+                        <h4>Dumebi (The Remixes) EP</h4>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="Bad Commando - EP.html">
+                        <img src="images/Music Library/Bad Commando cover photo.jpg" alt="Bad Commando cover photo">
+                        <h4>Bad Commando - EP</h4>
+                    </a>
+                </div>             
+                <div class="album">
+                    <a href="Freestyle - EP.html">
+                        <img src="images/Music Library/Freestyle - EP cover photo.jpg" alt="Freestyle - EP cover photo">
+                        <h4>Freestyle - EP</h4>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="REMA - EP.html">
+                        <img src="images/Music Library/Rema - EP cover photo.jpg" alt="Rema - EP cover photo">
+                        <h4>REMA - EP</h4>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/heisrema" target="_blank" class="icon facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/heisrema" target="_blank" class="icon twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/heisrema" target="_blank" class="icon instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/heisrema" target="_blank" class="icon youtube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <p>&copy; 2024 Rema Music Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

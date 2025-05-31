@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+}
+
+header .logo h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+    padding: 7px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    background-color: hsl(122, 39%, 39%);
+}
+
+nav ul li.active{
+    background-color: hsl(122, 39%, 19%);
+
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #4CAF50;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.icon.facebook:hover { background-color: #3b5998; }
+.icon.twitter:hover { background-color: #1DA1F2; }
+.icon.instagram:hover { background-color: #E4405F; }
+.icon.youtube:hover { background-color: #FF0000; }
+
+.icon i {
+    line-height: 40px;
+}
+
+.fab {
+    font-size: 1.5em;
+}
+
